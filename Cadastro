@@ -1,0 +1,49 @@
+print("=*=" * 10)
+print(">>>Lista de cadastro<<<")
+print("=*=" * 10)
+cad = {}
+cadas = list()
+soma = fem = hom = idademi = idadmed = idade30 = idade50 = 0
+while True:
+	cad.clear()
+	cad["nome"] = str(input("nome: "))
+	cad["sexo"] = str(input('sexo: '))
+	cad["idade"] = int(input("idade: "))
+	if cad["idade"] < 18:
+		break
+		print(f"O {cad['nome']} possui menos de 18 anos, o mesmo nao pode ser cadastrado!!")
+	cad["cidade"] = str(input("cidade: "))
+	cad["estado"] = str(input("estado: "))
+	cadas.append(cad.copy())
+	
+	
+	
+	if cad["estado"] == "sp":
+		soma += 1
+	if cad["sexo"] == "m":
+		hom += 1
+	if cad['sexo'] == 'f':
+		fem += 1
+	if cad["idade"]  >= 18 and cad["idade"] <= 30:
+		idademi += 1
+	if cad["idade"] >= 31 and cad["idade"] <= 50:
+		idade30 += 1
+	if cad["idade"] > 50:
+		idade50 += 1
+		
+	per = str(input("Cadastrar novas pessoas? "))
+	if per == "n":
+		break 
+		
+	
+print("=*=" * 30)		
+print(cadas)
+print(f"existem {soma} pessoas de sp cadastradas ")
+print(f"existem {hom} homens cadastrados")
+print(f'existem {fem} mulheres cadastradas ')
+print(f"existem {idademi} pessoas entre 18 a 30 anos cadasteadas") 
+print(f'existem {idade30} pessoas entre 31 a 50 anos cadastradas"')
+print(f'existem {idade50} pessoa com mais de 50 anos cadastradas ')
+print("=*=" * 30)
+	
+		
