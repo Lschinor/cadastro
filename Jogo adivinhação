@@ -1,0 +1,14 @@
+
+import random 
+pcnum = (1, 2, 3, 5, 6, 7, 8, 9, 10)
+numpc = random.choice(pcnum)
+cont = 0
+while True:	
+	num = int(input("Digite um numero de 0 a 10: "))
+	if num > 10 or num < 0:
+		print("Por favor, digite um numero de 0 a 10")
+	if num == numpc:
+		print(f"Voce digitou o numero {num} e o computador {numpc} , parabens, você conseguiu")
+		break
+	else:
+		print("Que pena, você errou, tente novamente")
